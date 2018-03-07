@@ -19,4 +19,8 @@ heroku apps:create NAME-OF-BOT
 ```
 5. This should output a URL for your bot to live at. Log back into Groupme dev center and paste this URL into your bots **Callback URL**
 6. Next, copy your bots **ID** and log into your heroku account.
-7.Inside Heroku, select your app, and go to settings. Scroll down and click **Reveal Config Vars** and create a variable called **GROUPME_BOT_ID** and paste in the ID of your bot from groupme and click ADD
+7. Push our app to heroku:
+```
+git push heroku master
+```
+8. Inside Heroku, select your app, and go to settings. Scroll down and click **Reveal Config Vars** and create a variable called **GROUPME_BOT_ID** and paste in the ID of your bot from groupme and click ADD
