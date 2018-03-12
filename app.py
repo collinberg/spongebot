@@ -16,7 +16,7 @@ def webhook():
   log('Recieved {}'.format(data))
 
   # We don't want to reply to ourselves!
-  if data['name'] != 'SpongeBob':
+  if data['name'] != 'SpongeBob' and data['text'] != '' and data['text'].startswith("http") != True:
     newName = data['name'].replace(' ', '-')
     newText = data['text'].replace(' ', '-')
     msg = 'https://memegen.link/spongebob/{}/{}.jpg'.format(newName, newText)
